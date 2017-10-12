@@ -1,0 +1,23 @@
+1、完全的PowerShell脚本实现
+2、能够在本地工作、远程工作，或者从目标机器上收集到的dump文件中提取
+3、不需要使用操作系统dll文件来在内存中定位凭证地址，但是需要一个简单的微软调试器
+4、不需要使用操作系统dll文件来破译收集的密码，破译工作完全由PowerShell脚本实现（AES、3DES、DES-X）
+5、它能够破译微软未归档的DES-X
+6、它能够工作在与目标系统不同架构的系统上
+7、在内存中不留痕迹
+
+
+（1）远程提取：
+* Launch the script
+* Local computer, Remote computer or from a dump file ? (local, remote, dump): remote [enter]
+* serverName [enter]
+
+（2）从一个dump文件中提取：如果你必须转储目标机器的本地安全认证子系统服务（LSASS）进程信息，你可以用下面的功能选项来执行脚本：
+
+* Launch the script 
+* Local computer, Remote computer or from a dump file ? (local, remote, dump): dump [enter]
+* d:\directory_of_the_dump [enter]
+
+（3）本地提取
+* Launch the script 
+* Local computer, Remote computer or from a dump file ? (local, remote, dump): local [enter]
